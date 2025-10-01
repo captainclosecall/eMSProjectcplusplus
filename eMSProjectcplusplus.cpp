@@ -30,12 +30,28 @@ int main()
                 while (loggedIn == true)
                 {
                     std::cout << "Welcome " << cast.GetName() << "!\n";
+                    std::cout << "1. Check clock status\n";
+                    std::cout << "2. Clock in\n";
+                    std::cout << "3. Clock out\n";
+                    std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
                     std::cin >> employeeLogInMenu;
 
                     switch (employeeLogInMenu)
                     {
                     case 1:
+                        cast.CheckClockStatus();
+                        system("cls");
+                        break;
+                    case 2:
+                        cast.ClockIn();
+                        system("cls");
+                        break;
+                    case 3:
+                        cast.ClockOut();
+                        system("cls");
+                        break;
+                    case 4:
                         loggedIn = false;
                         break;
                     default:
@@ -53,12 +69,28 @@ int main()
                 while (loggedIn == true)
                 {
                     std::cout << "Welcome " << mg.GetName() << "!\n";
+                    std::cout << "1. Check clock status\n";
+                    std::cout << "2. Clock in\n";
+                    std::cout << "3. Clock out\n";
+                    std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
                     std::cin >> employeeLogInMenu;
 
                     switch (employeeLogInMenu)
                     {
                     case 1:
+                        mg.CheckClockStatus();
+                        system("cls");
+                        break;
+                    case 2:
+                        mg.ClockIn();
+                        system("cls");
+                        break;
+                    case 3:
+                        mg.ClockOut();
+                        system("cls");
+                        break;
+                    case 4:
                         loggedIn = false;
                         break;
                     default:
@@ -77,12 +109,27 @@ int main()
                 while (loggedIn == false)
                 {
                     std::cout << "Welcome " << lead.GetName() << "!\n";
+                    std::cout << "1. Check clock status\n";
+                    std::cout << "2. Clock in\n";
+                    std::cout << "3. Clock out\n";
+                    std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
                     std::cin >> employeeLogInMenu;
 
                     switch (employeeLogInMenu)
                     {
                     case 1:
+                        lead.CheckClockStatus();
+                        system("cls");
+                        break;
+                    case 2:
+                        lead.ClockIn();
+                        system("cls");
+                    case 3:
+                        lead.ClockOut();
+                        system("cls");
+                        break;
+                    case 4:
                         loggedIn = false;
                         break;
                     default:
@@ -100,12 +147,28 @@ int main()
                 while (loggedIn == true)
                 {
                     std::cout << "Welcome " << IT.GetName() << "!\n";
+                    std::cout << "1. Check clock status\n";
+                    std::cout << "2. Clock in\n";
+                    std::cout << "3. Clock out\n";
+                    std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
                     std::cin >> employeeLogInMenu;
 
                     switch (employeeLogInMenu)
                     {
                     case 1:
+                        IT.CheckClockStatus();
+                        system("cls");
+                        break;
+                    case 2:
+                        IT.ClockIn();
+                        system("cls");
+                        break;
+                    case 3:
+                        IT.ClockOut();
+                        system("cls");
+                        break;
+                    case 4:
                         loggedIn = false;
                         break;
                     default:
