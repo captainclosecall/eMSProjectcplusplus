@@ -40,16 +40,16 @@ int main()
                     switch (employeeLogInMenu)
                     {
                     case 1:
-                        cast.CheckClockStatus();
                         system("cls");
+                        cast.CheckClockStatus();
                         break;
                     case 2:
-                        cast.ClockIn();
                         system("cls");
+                        cast.ClockIn();
                         break;
                     case 3:
-                        cast.ClockOut();
                         system("cls");
+                        cast.ClockOut();
                         break;
                     case 4:
                         loggedIn = false;
@@ -79,16 +79,16 @@ int main()
                     switch (employeeLogInMenu)
                     {
                     case 1:
-                        mg.CheckClockStatus();
                         system("cls");
+                        mg.CheckClockStatus();
                         break;
                     case 2:
-                        mg.ClockIn();
                         system("cls");
+                        mg.ClockIn();
                         break;
                     case 3:
-                        mg.ClockOut();
                         system("cls");
+                        mg.ClockOut();
                         break;
                     case 4:
                         loggedIn = false;
@@ -119,15 +119,15 @@ int main()
                     switch (employeeLogInMenu)
                     {
                     case 1:
-                        lead.CheckClockStatus();
                         system("cls");
+                        lead.CheckClockStatus();
                         break;
                     case 2:
+                        system("cls");
                         lead.ClockIn();
-                        system("cls");
                     case 3:
-                        lead.ClockOut();
                         system("cls");
+                        lead.ClockOut();
                         break;
                     case 4:
                         loggedIn = false;
@@ -157,16 +157,16 @@ int main()
                     switch (employeeLogInMenu)
                     {
                     case 1:
-                        IT.CheckClockStatus();
                         system("cls");
+                        IT.CheckClockStatus();
                         break;
                     case 2:
-                        IT.ClockIn();
                         system("cls");
+                        IT.ClockIn();
                         break;
                     case 3:
-                        IT.ClockOut();
                         system("cls");
+                        IT.ClockOut();
                         break;
                     case 4:
                         loggedIn = false;
