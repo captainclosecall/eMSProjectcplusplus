@@ -22,54 +22,9 @@ public:
 	void SetName(std::string newName);
 
 	//Methods
-	const void CheckClockStatus()
-	{
-		if (clockStatus == true)
-		{
-			std::cout << mName << " is currently clocked in.\n";
-		}
-		else
-		{
-			std::cout << mName << " is currently clocked out.\n";
-		}
-	}
-
-	const void ClockStatusChanged()
-	{
-		if (clockStatus == true)
-		{
-			std::cout << mName << " has been clocked in.\n";
-		}
-		else
-		{
-			std::cout << mName << " has been clocked out.\n";
-		}
-	}
-
-	void ClockIn()
-	{
-		if (clockStatus == false)
-		{
-			clockStatus = !clockStatus;
-			ClockStatusChanged();
-		}
-		else
-		{
-			CheckClockStatus();
-		}
-	}
-
-	void ClockOut()
-	{
-		if (clockStatus == true)
-		{
-			clockStatus = !clockStatus;
-			ClockStatusChanged();
-		}
-		else
-		{
-			CheckClockStatus();
-		}
-	}
+	const void CheckClockStatus();
+	const void ClockStatusChanged();
+	void ClockIn();
+	void ClockOut();
 };
 
