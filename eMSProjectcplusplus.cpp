@@ -33,7 +33,8 @@ int main()
                     std::cout << "1. Check clock status\n";
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
-                    std::cout << "4. EXIT\n";
+                    std::cout << "4. Check clock stats\n";
+                    std::cout << "5. EXIT\n";
                     std::cout << "Please select an option: ";
                     int castMenu = Utilities::inputValidation();
 
@@ -52,6 +53,10 @@ int main()
                         cast.ClockOut();
                         break;
                     case 4:
+                        system("cls");
+                        cast.CheckClockStats();
+                        break;
+                    case 5:
                         loggedIn = false;
                         break;
                     default:
@@ -74,7 +79,8 @@ int main()
                     std::cout << "1. Check clock status\n";
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
-                    std::cout << "4. EXIT\n";
+                    std::cout << "4. Check clock ststs\n";
+                    std::cout << "5. EXIT\n";
                     std::cout << "Please select an option: ";
                     int managerMenu = Utilities::inputValidation();
 
@@ -93,6 +99,8 @@ int main()
                         mg.ClockOut();
                         break;
                     case 4:
+                        break;
+                    case 5:
                         loggedIn = false;
                         break;
                     default:
@@ -116,7 +124,8 @@ int main()
                     std::cout << "1. Check clock status\n";
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
-                    std::cout << "4. EXIT\n";
+                    std::cout << "4. Check clock stats\n";
+                    std::cout << "5. EXIT\n";
                     std::cout << "Please select an option: ";
                     int leaderMenu = Utilities::inputValidation();
                 
@@ -134,6 +143,8 @@ int main()
                         lead.ClockOut();
                         break;
                     case 4:
+                        break;
+                    case 5:
                         loggedIn = false;
                         break;
                     default:
@@ -156,7 +167,8 @@ int main()
                     std::cout << "1. Check clock status\n";
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
-                    std::cout << "4. EXIT\n";
+                    std::cout << "4. Check clock stats\n";
+                    std::cout << "5. EXIT\n";
                     std::cout << "Please select an option: ";
                     int itMenu = Utilities::inputValidation();
 
@@ -175,6 +187,8 @@ int main()
                         IT.ClockOut();
                         break;
                     case 4:
+                        break;
+                    case 5:
                         loggedIn = false;
                         break;
                     default:

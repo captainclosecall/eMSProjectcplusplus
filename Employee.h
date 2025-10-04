@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<vector>
 #include"Utilities.h"
 
 class Employee
@@ -13,6 +14,10 @@ private:
 	
 
 public:
+	//unintialized member variables
+	std::vector < std::pair<time_t, std::string>> clockInHistory;
+	std::vector < std::pair<time_t, std::string>> clockOutHistory;
+
 	//Constructor
 	Employee(std::string name,unsigned int employeeid, Utilities::Role employeeRole) 
 		: mName(name), mEmployeeId(employeeid),mEmployeeRole(employeeRole),mClockStatus(false) {}
@@ -31,5 +36,6 @@ public:
 	const void ClockStatusChanged();
 	void ClockIn();
 	void ClockOut();
+	const void CheckClockStats();
 };
 
