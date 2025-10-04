@@ -9,7 +9,7 @@
 
 int main()
 {
-    iTTech IT1("Jayleen Wilson", -1);
+    iTTech IT1("Jayleen Wilson", -1,Utilities::corporate);
     std::vector<iTTech> iTTechlist;
     iTTechlist.push_back(IT1);
 

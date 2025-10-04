@@ -7,7 +7,7 @@ void Employee::SetName(std::string newName)
 
 const void Employee::CheckClockStatus()
 {
-	if (clockStatus == true)
+	if (mClockStatus == true)
 	{
 		std::cout << mName << " is currently clocked in.\n";
 	}
@@ -19,7 +19,7 @@ const void Employee::CheckClockStatus()
 
 const void Employee::ClockStatusChanged()
 {
-	if (clockStatus == true)
+	if (mClockStatus == true)
 	{
 		std::cout << mName << " has been clocked in.\n";
 	}
@@ -31,9 +31,9 @@ const void Employee::ClockStatusChanged()
 
 void Employee::ClockIn()
 {
-	if (clockStatus == false)
+	if (mClockStatus == false)
 	{
-		clockStatus = !clockStatus;
+		mClockStatus = !mClockStatus;
 		ClockStatusChanged();
 	}
 	else
@@ -44,9 +44,9 @@ void Employee::ClockIn()
 
 void Employee::ClockOut()
 {
-	if (clockStatus == true)
+	if (mClockStatus == true)
 	{
-		clockStatus = !clockStatus;
+		mClockStatus = !mClockStatus;
 		ClockStatusChanged();
 	}
 	else
