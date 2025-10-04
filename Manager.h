@@ -14,6 +14,7 @@ public:
 	Manager(std::string managerName,unsigned int managerId,Utilities::Role managerRole) : Employee(managerName,managerId,managerRole) {}
 	//Getters
 	//Methods
+	const void listAllEmployees(std::vector<Employee> &cast);
 	
 };
 

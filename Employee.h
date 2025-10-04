@@ -37,5 +37,6 @@ public:
 	void ClockIn();
 	void ClockOut();
 	const void CheckClockStats();
+	const void PrintRole(Utilities::Role position);
 };
 

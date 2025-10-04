@@ -107,3 +107,35 @@ const void Employee::CheckClockStats()
 		}
 	}
 }
+
+const void Employee::PrintRole(Utilities::Role position)
+{
+	if (position == 0)
+	{
+		std::cout << "No role assigned.\n";
+	}
+	else if (position == 1)
+	{
+		std::cout << "Merchandise";
+	}
+	else if (position == 2)
+	{
+		std::cout << "Food & Beverage";
+	}
+	else if (position == 3)
+	{
+		std::cout << "Tour guide";
+	}
+	else if (position == 4)
+	{
+		std::cout << "House keeping";
+	}
+	else if (position == 5)
+	{
+		std::cout << "Corporate";
+	}
+	else
+	{
+		std::cout << "Nothing here ";
+	}
+}
