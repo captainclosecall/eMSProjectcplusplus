@@ -5,6 +5,7 @@
 #include"Manager.h"
 #include"Leader.h"
 #include"iTTech.h"
+#include"Utilities.h"
 
 int main()
 {
@@ -12,22 +13,21 @@ int main()
     std::vector<iTTech> iTTechlist;
     iTTechlist.push_back(IT1);
 
-
     while (true)
     {
-        bool loggedIn = true;
-        unsigned int employeeLogInMenu;
+        bool loggedIn = true; //A condition parameter to keep user logged into personalized log in screen.
+        bool validateLogin = false; // A condition parameter to give user feedback if user ID that is entered does not match any users
+
         std::cout << "Enter employee ID: ";
-
-        int employeeNum;
-
-        std::cin >> employeeNum;
+        int employeeNum = Utilities::inputValidation();
 
         for (Employee& cast : IT1.employeeList)
         {
             if (employeeNum == cast.GetEmployeeId())
             {
-                while (loggedIn == true)
+                validateLogin = true;
+
+                while (loggedIn)
                 {
                     std::cout << "Welcome " << cast.GetName() << "!\n";
                     std::cout << "1. Check clock status\n";
@@ -35,9 +35,9 @@ int main()
                     std::cout << "3. Clock out\n";
                     std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
-                    std::cin >> employeeLogInMenu;
+                    int castMenu = Utilities::inputValidation();
 
-                    switch (employeeLogInMenu)
+                    switch (castMenu)
                     {
                     case 1:
                         system("cls");
@@ -66,7 +66,9 @@ int main()
         {
             if (employeeNum == mg.GetEmployeeId())
             {
-                while (loggedIn == true)
+                validateLogin = true;
+
+                while (loggedIn)
                 {
                     std::cout << "Welcome " << mg.GetName() << "!\n";
                     std::cout << "1. Check clock status\n";
@@ -74,9 +76,9 @@ int main()
                     std::cout << "3. Clock out\n";
                     std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
-                    std::cin >> employeeLogInMenu;
+                    int managerMenu = Utilities::inputValidation();
 
-                    switch (employeeLogInMenu)
+                    switch (managerMenu)
                     {
                     case 1:
                         system("cls");
@@ -106,7 +108,9 @@ int main()
         {
             if (employeeNum == lead.GetEmployeeId())
             {
-                while (loggedIn == false)
+                validateLogin = true;
+
+                while (loggedIn)
                 {
                     std::cout << "Welcome " << lead.GetName() << "!\n";
                     std::cout << "1. Check clock status\n";
@@ -114,9 +118,9 @@ int main()
                     std::cout << "3. Clock out\n";
                     std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
-                    std::cin >> employeeLogInMenu;
-
-                    switch (employeeLogInMenu)
+                    int leaderMenu = Utilities::inputValidation();
+                
+                    switch (leaderMenu)
                     {
                     case 1:
                         system("cls");
@@ -144,7 +148,9 @@ int main()
         {
             if (employeeNum == IT.GetEmployeeId())
             {
-                while (loggedIn == true)
+                validateLogin = true;
+
+                while (loggedIn)
                 {
                     std::cout << "Welcome " << IT.GetName() << "!\n";
                     std::cout << "1. Check clock status\n";
@@ -152,9 +158,9 @@ int main()
                     std::cout << "3. Clock out\n";
                     std::cout << "4. EXIT\n";
                     std::cout << "Please select an option: ";
-                    std::cin >> employeeLogInMenu;
+                    int itMenu = Utilities::inputValidation();
 
-                    switch (employeeLogInMenu)
+                    switch (itMenu)
                     {
                     case 1:
                         system("cls");
@@ -178,9 +184,12 @@ int main()
                 }
             }
         }
+        //Gives user feedback about the ID they entered
+        if (validateLogin == false)
+        {
+            std::cout << "Please enter valid ID.\n";
+        }
     }
-
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

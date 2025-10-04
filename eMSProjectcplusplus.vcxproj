@@ -133,6 +133,7 @@
     <ClCompile Include="iTTech.cpp" />
     <ClCompile Include="Leader.cpp" />
     <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrator.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="iTTech.h" />
     <ClInclude Include="Leader.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
