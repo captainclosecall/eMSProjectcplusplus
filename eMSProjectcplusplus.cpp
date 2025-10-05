@@ -105,6 +105,7 @@ int main()
                         break;
                     case 5:
                         system("cls");
+                        std::cout << "Cast members:\n";
                         mg.listAllEmployees(IT1.employeeList);
                         break;
                     case 6:
@@ -132,7 +133,8 @@ int main()
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
                     std::cout << "4. Check clock stats\n";
-                    std::cout << "5. EXIT\n";
+                    std::cout << "5. List all Employees\n";
+                    std::cout << "6. EXIT\n";
                     std::cout << "Please select an option: ";
                     int leaderMenu = Utilities::inputValidation();
                 
@@ -153,6 +155,62 @@ int main()
                         lead.CheckClockStats();
                         break;
                     case 5:
+                        std::cout << "Cast members:\n";
+                        lead.listAllEmployees(IT1.employeeList);
+                        std::cout << "Managers:\n";
+                        lead.listAllEmployees(IT1.managerList);
+                    case 6:
+                        loggedIn = false;
+                        break;
+                    default:
+                        std::cout << "Please select a valid option.\n";
+                        break;
+                    }
+                }
+            }
+        }
+                for (Administrator& admin : IT1.adminList)
+        {
+            if (employeeNum == admin.GetEmployeeId())
+            {
+                validateLogin = true;
+
+                while (loggedIn)
+                {
+                    std::cout << "Welcome " << admin.GetName() << "!\n";
+                    std::cout << "1. Check clock status\n";
+                    std::cout << "2. Clock in\n";
+                    std::cout << "3. Clock out\n";
+                    std::cout << "4. Check clock stats\n";
+                    std::cout << "5. List all Employees\n";
+                    std::cout << "6. EXIT\n";
+                    std::cout << "Please select an option: ";
+                    int leaderMenu = Utilities::inputValidation();
+                
+                    switch (leaderMenu)
+                    {
+                    case 1:
+                        system("cls");
+                        admin.CheckClockStatus();
+                        break;
+                    case 2:
+                        system("cls");
+                        admin.ClockIn();
+                    case 3:
+                        system("cls");
+                        admin.ClockOut();
+                        break;
+                    case 4:
+                        admin.CheckClockStats();
+                        break;
+                    case 5:
+                        std::cout << "Cast Members:\n";
+                        admin.listAllEmployees(IT1.employeeList);
+                        std::cout << "Managers:\n";
+                        admin.listAllEmployees(IT1.managerList);
+                        std::cout << "Leaders:\n";
+                        admin.listAllEmployees(IT1.leaderList);
+                    case 6:
                         loggedIn = false;
                         break;
                     default:
@@ -176,7 +234,8 @@ int main()
                     std::cout << "2. Clock in\n";
                     std::cout << "3. Clock out\n";
                     std::cout << "4. Check clock stats\n";
-                    std::cout << "5. EXIT\n";
+                    std::cout << "5. List all employees\n";
+                    std::cout << "6. EXIT\n";
                     std::cout << "Please select an option: ";
                     int itMenu = Utilities::inputValidation();
 
@@ -198,6 +257,16 @@ int main()
                         IT.CheckClockStats();
                         break;
                     case 5:
+                        std::cout << "Cast members:\n";
+                        IT.listAllEmployees(IT1.employeeList);
+                        std::cout << "Managers:\n";
+                        IT.listAllEmployees(IT1.managerList); 
+                        std::cout << "Leaders:\n";
+                        IT.listAllEmployees(IT1.leaderList);
+                        std::cout << "Administrators:\n";
+                        IT.listAllEmployees(IT1.adminList);
+                        break;
+                    case 6:
                         loggedIn = false;
                         break;
                     default:
