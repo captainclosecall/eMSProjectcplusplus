@@ -11,8 +11,9 @@ private:
 public:
 	//unintialized member variables
 	std::vector<Leader> leaderList = { Leader("jj",3,Utilities::corporate) };
+	std::vector<Employee> inactiveList;
 	//constructor
-	Administrator(std::string adminName,unsigned int adminId,Utilities::Role adminRole) : Leader(adminName,adminId,adminRole) {}
+	Administrator(std::string adminName,int adminId,Utilities::Role adminRole) : Leader(adminName,adminId,adminRole) {}
 
 	//Methods
 	void CreateEmployee(std::vector<Employee>& cast, std::vector<Manager>& mg, std::vector<Leader>& lead);
