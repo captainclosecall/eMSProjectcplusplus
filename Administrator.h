@@ -2,6 +2,8 @@
 
 #pragma once
 #include"Leader.h"
+#include"Utilities.h"
+#include"string"
 
 class Administrator : public Leader
 {
@@ -13,5 +15,6 @@ public:
 	Administrator(std::string adminName,unsigned int adminId,Utilities::Role adminRole) : Leader(adminName,adminId,adminRole) {}
 
 	//Methods
+	void CreateEmployee(std::vector<Employee>& cast, std::vector<Manager>& mg, std::vector<Leader>& lead);
 };
 

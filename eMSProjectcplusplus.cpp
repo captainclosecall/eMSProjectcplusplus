@@ -9,7 +9,7 @@
 
 int main()
 {
-    iTTech IT1("Jayleen Wilson", -1,Utilities::corporate);
+    iTTech IT1("Jayleen Wilson", -2,Utilities::corporate);
     std::vector<iTTech> iTTechlist;
     iTTechlist.push_back(IT1);
 
@@ -147,18 +147,22 @@ int main()
                     case 2:
                         system("cls");
                         lead.ClockIn();
+                        break;
                     case 3:
                         system("cls");
                         lead.ClockOut();
                         break;
                     case 4:
+                        system("cls");
                         lead.CheckClockStats();
                         break;
                     case 5:
+                        system("cls");
                         std::cout << "Cast members:\n";
                         lead.listAllEmployees(IT1.employeeList);
                         std::cout << "Managers:\n";
                         lead.listAllEmployees(IT1.managerList);
+                        break;
                     case 6:
                         loggedIn = false;
                         break;
@@ -183,7 +187,8 @@ int main()
                     std::cout << "3. Clock out\n";
                     std::cout << "4. Check clock stats\n";
                     std::cout << "5. List all Employees\n";
-                    std::cout << "6. EXIT\n";
+                    std::cout << "6. Create cast\n";
+                    std::cout << "7. EXIT\n";
                     std::cout << "Please select an option: ";
                     int leaderMenu = Utilities::inputValidation();
                 
@@ -196,21 +201,29 @@ int main()
                     case 2:
                         system("cls");
                         admin.ClockIn();
+                        break;
                     case 3:
                         system("cls");
                         admin.ClockOut();
                         break;
                     case 4:
+                        system("cls");
                         admin.CheckClockStats();
                         break;
                     case 5:
+                        system("cls");
                         std::cout << "Cast Members:\n";
                         admin.listAllEmployees(IT1.employeeList);
                         std::cout << "Managers:\n";
                         admin.listAllEmployees(IT1.managerList);
                         std::cout << "Leaders:\n";
                         admin.listAllEmployees(IT1.leaderList);
+                        break;
                     case 6:
+                        system("cls");
+                        admin.CreateEmployee(IT1.employeeList, IT1.managerList, IT1.leaderList);
+                        break;
+                    case 7:
                         loggedIn = false;
                         break;
                     default:
@@ -254,6 +267,7 @@ int main()
                         IT.ClockOut();
                         break;
                     case 4:
+                        system("cls");
                         IT.CheckClockStats();
                         break;
                     case 5:

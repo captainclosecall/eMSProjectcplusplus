@@ -14,10 +14,10 @@ public:
 	Manager(std::string managerName,unsigned int managerId,Utilities::Role managerRole) : Employee(managerName,managerId,managerRole) {}
 	//Getters
 	//Methods
-	template <typename t>
-	const void listAllEmployees(std::vector<t>& cast)
+	template <typename a>
+	const void listAllEmployees(std::vector<a>& cast)
 	{
-		for (t& workers : cast)
+		for (a& workers : cast)
 		{
 			int count = 0;
 			count = count + 1;
