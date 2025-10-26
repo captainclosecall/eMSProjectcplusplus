@@ -8,7 +8,7 @@ private:
 
 public:
 	//unintialized member variables
-	std::vector<Administrator> adminList = { Administrator("Jayleen",-1,Utilities::corporate) };
+	std::vector<Administrator> adminList = { Administrator("Jayleen",4,Utilities::corporate) };
 
 	//constructor
 	iTTech(std::string iTTechName,int iTTechId,Utilities::Role iTTechRole) : Administrator(iTTechName,iTTechId,iTTechRole) {}
